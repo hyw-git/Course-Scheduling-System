@@ -1,0 +1,21 @@
+:root{
+  --blue-600: #2b7be9;
+  --blue-500: #3a8ff5;
+  --blue-50: #f2f8ff;
+  --white: #ffffff;
+  --muted: #6b7280;
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;font-family:Segoe UI, Roboto, "PingFang SC", sans-serif;background:var(--blue-50);color:#0f172a}
+.app-root{min-height:100%;display:flex;flex-direction:column}
+.topbar{height:64px;background:linear-gradient(90deg,var(--white),#f8fbff);display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(43,123,233,0.08)}
+.topbar .left{font-weight:600;color:var(--blue-600);font-size:18px}
+.topbar .right .btn{background:var(--blue-500);color:var(--white);border:none;padding:8px 14px;border-radius:10px;cursor:pointer;box-shadow:0 2px 6px rgba(58,143,245,0.18)}
+.layout{display:flex;flex:1}
+.sidebar{width:220px;background:var(--white);padding:18px;border-right:1px solid rgba(15,23,42,0.04)}
+.sidebar ul{list-style:none;padding:0;margin:6px 0}
+.sidebar a.nav-item{display:block;padding:12px 14px;margin-bottom:8px;border-radius:4px;color:#000000;cursor:pointer;text-decoration:none;background:transparent;border:1px solid transparent}
+.sidebar a.nav-item:hover{background:var(--blue-50)}
+.sidebar a.nav-item.router-link-active{background:var(--blue-600);color:var(--white);box-shadow:none;border-color:rgba(43,123,233,0.06)}
+.main-content{flex:1;padding:28px}
+.btn{font-size:14px}
