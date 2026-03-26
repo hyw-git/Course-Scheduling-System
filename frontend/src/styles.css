@@ -1,21 +1,37 @@
 :root{
-  --blue-600: #2b7be9;
-  --blue-500: #3a8ff5;
-  --blue-50: #f2f8ff;
-  --white: #ffffff;
+  --primary-600: #1e88e5;
+  --primary-700: #1565c0;
+  --primary-500: #3a8ff5;
+  --bg-50: #f7fbff;
+  --surface: #ffffff;
+  --success: #2e7d32;
   --muted: #6b7280;
+  --border-muted: #d6e9fb;
+  --focus-ring: rgba(30,136,229,0.12);
+  --shadow-strong: rgba(2,31,64,0.18);
 }
 *{box-sizing:border-box}
-html,body,#app{height:100%;margin:0;font-family:Segoe UI, Roboto, "PingFang SC", sans-serif;background:var(--blue-50);color:#0f172a}
+html,body,#app{height:100%;margin:0;font-family:Segoe UI, Roboto, "PingFang SC", sans-serif;background:var(--bg-50);color:#0f172a}
 .app-root{min-height:100%;display:flex;flex-direction:column}
-.topbar{height:64px;background:linear-gradient(90deg,var(--white),#f8fbff);display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(43,123,233,0.08)}
-.topbar .left{font-weight:600;color:var(--blue-600);font-size:18px}
-.topbar .right .btn{background:var(--blue-500);color:var(--white);border:none;padding:8px 14px;border-radius:10px;cursor:pointer;box-shadow:0 2px 6px rgba(58,143,245,0.18)}
+.topbar{height:64px;background:linear-gradient(90deg,var(--surface),#f8fbff);display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(30,136,229,0.06)}
+.topbar .left{font-weight:600;color:var(--primary-600);font-size:18px}
+.topbar .right .btn{background:var(--primary-500);color:var(--surface);border:none;padding:8px 14px;border-radius:10px;cursor:pointer;box-shadow:0 2px 6px var(--shadow-strong)}
 .layout{display:flex;flex:1}
-.sidebar{width:220px;background:var(--white);padding:18px;border-right:1px solid rgba(15,23,42,0.04)}
+.sidebar{width:220px;background:var(--surface);padding:18px;border-right:1px solid rgba(15,23,42,0.04)}
 .sidebar ul{list-style:none;padding:0;margin:6px 0}
-.sidebar a.nav-item{display:block;padding:12px 14px;margin-bottom:8px;border-radius:4px;color:#000000;cursor:pointer;text-decoration:none;background:transparent;border:1px solid transparent}
-.sidebar a.nav-item:hover{background:var(--blue-50)}
-.sidebar a.nav-item.router-link-active{background:var(--blue-600);color:var(--white);box-shadow:none;border-color:rgba(43,123,233,0.06)}
+.sidebar a.nav-item{display:block;padding:12px 14px;margin-bottom:8px;border-radius:6px;color:#0f172a;cursor:pointer;text-decoration:none;background:transparent;border:1px solid transparent}
+.sidebar a.nav-item:hover{background:var(--bg-50)}
+.sidebar a.nav-item.router-link-active{background:var(--primary-600);color:var(--surface);box-shadow:none;border-color:rgba(30,136,229,0.06)}
 .main-content{flex:1;padding:28px}
 .btn{font-size:14px}
+
+/* Inputs and common controls */
+.input{width:100%;padding:10px 12px;margin-top:6px;border:1px solid var(--border-muted);border-radius:6px;background:var(--bg-50);outline:none;transition:box-shadow .15s,border-color .15s}
+.input:focus{border-color:var(--primary-600);box-shadow:0 0 0 4px var(--focus-ring)}
+
+/* Utility buttons */
+.btn-primary{background:linear-gradient(180deg,var(--primary-600),var(--primary-700));color:var(--surface);border:none;padding:8px 14px;border-radius:8px;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--primary-600);border:1px solid rgba(11,102,178,0.12);padding:8px 12px;border-radius:8px}
+
+/* Card / modal surface helpers */
+.card{background:var(--surface);border-radius:8px;box-shadow:0 8px 24px var(--shadow-strong);padding:16px}
